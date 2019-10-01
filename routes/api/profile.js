@@ -5,6 +5,7 @@ const router = express.Router();
 const auth = require("../../middleware/auth");
 const { check, validationResult } = require("express-validator");
 
+const Post = require("../../models/Post");
 const Profile = require("../../models/Profile");
 const User = require("../../models/User");
 
@@ -248,7 +249,7 @@ router.delete("/experience/:exp_id", auth, async (req, res) => {
     //   item => item.id !== req.params.exp_id
     // );
     const removeIndex = profile.experience
-      .map(item => item.id)
+      .map(item => item.id.toString())
       .indexOf(req.params.exp_id);
 
     if (removeIndex === -1) {
@@ -339,7 +340,7 @@ router.delete("/education/:edu_id", auth, async (req, res) => {
     //   item => item.id !== req.params.exp_id
     // );
     const removeIndex = profile.education
-      .map(item => item.id)
+      .map(item => item.id.toString())
       .indexOf(req.params.edu_id);
 
     if (removeIndex === -1) {

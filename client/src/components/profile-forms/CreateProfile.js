@@ -108,7 +108,9 @@ const Createprofile = ({
             value={location}
             onChange={e => onChange(e)}
           />
-          <small className="form-text">City & state suggested (eg.</small>
+          <small className="form-text">
+            City & state suggested (eg. Melbourne, VIC)
+          </small>
         </div>
         <div className="form-group">
           <input

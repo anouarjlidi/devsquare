@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 import PropTypes from "prop-types";
 import Moment from "react-moment";
 import { connect } from "react-redux";
@@ -14,10 +14,10 @@ const CommentItem = ({
   return (
     <div className="post bg-white p-1 my-1">
       <div>
-        <Link to={`/profile/${user}`}>
-          <img className="round-img" src={avatar} alt="" />
-          <h4>{name}</h4>
-        </Link>
+        {/* <Link to={`/profile/${user}`}> */}
+        <img className="round-img" src={avatar} alt="" />
+        <h4>{name}</h4>
+        {/* </Link> */}
       </div>
       <div>
         <p className="my-1">{text}</p>

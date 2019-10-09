@@ -1,5 +1,6 @@
 import axios from "axios";
 import { setAlert } from "./alert";
+
 import {
   REGISTER_SUCCESS,
   REGISTER_FAIL,
@@ -70,7 +71,7 @@ export const login = (email, password) => async dispatch => {
   };
 
   const body = JSON.stringify({ email, password });
-
+  dispatch({ type: CLEAR_PROFILE });
   try {
     const res = await axios.post("/api/auth", body, config);
     dispatch({
@@ -92,6 +93,6 @@ export const login = (email, password) => async dispatch => {
 
 // Logout / Clear Profile
 export const logout = () => dispatch => {
-  dispatch({ type: CLEAR_PROFILE });
+  // dispatch({ type: CLEAR_PROFILE });
   dispatch({ type: LOGOUT });
 };

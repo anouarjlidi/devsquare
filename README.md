@@ -12,7 +12,7 @@
 
 ## Url on Heroku
 
-https://devsquare.herokuapp.com/
+https://developersquare.herokuapp.com/
 
 ## Quick Start
 

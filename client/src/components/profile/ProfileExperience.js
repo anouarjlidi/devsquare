@@ -10,6 +10,7 @@ const ProfileExperience = ({ experience }) => (
         <div key={exp._id}>
           <h3 className="text-dark">{exp.company}</h3>
           <p>
+            <Moment format="DD/MM/YYYY">{exp.from}</Moment> -{" "}
             {!exp.to ? "Now" : <Moment format="DD/MM/YYYY">{exp.to}</Moment>}
           </p>
           <p>
